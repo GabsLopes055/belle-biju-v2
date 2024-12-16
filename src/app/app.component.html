@@ -1,3 +1,12 @@
-<main>
-  <tgt-button>Aqui</tgt-button>
-</main>
+<div class="corpo">
+  @if(isMenu.length) {
+      <menu></menu>
+  }
+
+  <div>
+      @if(isMenu.length){
+          <navbar></navbar>
+      }
+      <router-outlet />
+  </div>
+</div>

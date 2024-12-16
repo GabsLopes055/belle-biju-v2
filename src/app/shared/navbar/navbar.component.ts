@@ -8,7 +8,6 @@ import { UserService } from '../services/user/user.service';
 import { PerfilComponent } from '../perfil/perfil.component';
 import { TooltipDirective } from '../directives/tooltip.directive';
 import { Menu } from '../menu/menu.component';
-import { AbrirCameraComponent } from "../../private/admin/pages/alunos/components/cadastrar-aluno/components/abrir-camera/abrir-camera.component";
 
 @Component({
   selector: 'navbar',
@@ -22,7 +21,6 @@ import { AbrirCameraComponent } from "../../private/admin/pages/alunos/component
     PerfilComponent,
     TooltipDirective,
     RouterLinkActive,
-    AbrirCameraComponent
 ],
 })
 export class NavbarComponent {
@@ -32,7 +30,7 @@ export class NavbarComponent {
   isMenu = false;
   isDetail = false;
   title: any = '';
-  isViajar = this.service.showBtnViajar;
+  // isViajar = this.service.showBtnViajar;
   nameUser: string | undefined = '';
 
   constructor(
@@ -43,8 +41,8 @@ export class NavbarComponent {
   ) {
     this.title = service.title;
     const usuario = this.userService.user;
-    const firstName = usuario?.firstName.split(' ')[0];
-    this.nameUser = firstName;
+    // const firstName = usuario?.firstName.split(' ')[0];
+    // this.nameUser = firstName;
     this.menuService._menu.subscribe(menu => this.menu = menu);
     // console.log(usuario)
   }

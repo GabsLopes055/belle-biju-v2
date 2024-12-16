@@ -12,7 +12,7 @@ export class ToastComponent {
 
   @Input() color: TypeColorsToast = 'SUCCESS';
 
-  notification: Toast = this.service.notification;
+  notification!: Toast;
 
 
   colors: Colors = {

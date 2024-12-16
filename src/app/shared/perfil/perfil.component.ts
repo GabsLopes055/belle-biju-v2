@@ -23,8 +23,8 @@ export class PerfilComponent implements OnInit {
 
     if(this.userService.usuarioInstance) {
 
-      this.iniciais = this.userService.usuarioInstance.firstName.charAt(0).toUpperCase();
-      this.iniciais += this.userService.usuarioInstance.lastName.charAt(0).toUpperCase();
+      // this.iniciais = this.userService.usuarioInstance.firstName.charAt(0).toUpperCase();
+      // this.iniciais += this.userService.usuarioInstance.lastName.charAt(0).toUpperCase();
 
     }
   }
